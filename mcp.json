@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "rak": {
+      "command": "npx",
+      "args": ["-y", "@rak/mcp"],
+      "env": {
+        "RAK_API_KEY": "rk_...",
+        "RAK_BASE_URL": "https://rak.ad",
+        "RAK_TENANT_ID": "rak"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "ad.rak/rak-mcp",
+  "description": "Polskie treści lokalne + narzędzia redakcyjne AI: wyszukiwarka hybrydowa, wire, feedy per województwo (16 woj.), 1709 źródeł, research/pisanie/media/QA.",
+  "version": "0.0.0",
+  "repository": {
+    "url": "https://github.com/Hei33enberg/rak-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://rak.ad",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@rak/mcp",
+      "version": "0.0.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "RAK_API_KEY", "description": "Bearer key (pomiń dla dostępu anonimowego)", "isRequired": false, "isSecret": true },
+        { "name": "RAK_BASE_URL", "description": "Base URL węzła RAK", "isRequired": false, "default": "https://rak.ad" },
+        { "name": "RAK_TENANT_ID", "description": "Tenant", "isRequired": false, "default": "rak" }
+      ]
+    }
+  ],
+  "remotes": [
+    { "type": "streamable-http", "url": "https://rak.ad/api/mcp/rak/streamable-http" }
+  ]
+}

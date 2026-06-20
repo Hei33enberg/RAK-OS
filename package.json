@@ -1,0 +1,22 @@
+{
+  "name": "@rak/mcp",
+  "version": "0.0.0",
+  "private": true,
+  "description": "RAK Model Context Protocol — polskie treści lokalne (artykuły, wire, feedy per województwo, 1709 źródeł) + narzędzia redakcyjne AI (research, pisanie, media, QA) dla agentów.",
+  "type": "module",
+  "bin": { "rak-mcp": "dist/index.js" },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "skills", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "keywords": [
+    "mcp", "model-context-protocol", "claude", "cursor", "windsurf",
+    "poland", "polska", "news", "lokalne-media", "rag",
+    "journalism", "dziennikarstwo", "stanowski", "rak", "kanal-zero"
+  ],
+  "homepage": "https://rak.ad",
+  "repository": { "type": "git", "url": "https://github.com/Hei33enberg/rak-mcp.git" },
+  "license": "MIT",
+  "publishConfig": { "access": "public", "provenance": true },
+  "peerDependencies": { "@modelcontextprotocol/sdk": "^1" }
+}

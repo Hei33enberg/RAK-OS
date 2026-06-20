@@ -1,0 +1,26 @@
+{
+  "name": "rak-mcp",
+  "displayName": "RAK — polskie treści lokalne + AI redakcja",
+  "version": "0.0.0",
+  "description": "Instant dostęp do treści Kanału ZERO / RAK.AD (artykuły, wire, feedy per województwo, 1709 źródeł) oraz narzędzi redakcyjnych (research, pisanie, media, QA) przez MCP.",
+  "homepage": "https://rak.ad",
+  "categories": ["news", "content", "research", "poland", "media"],
+  "keywords": ["polska", "news", "lokalne media", "rag", "dziennikarstwo", "wojewodztwa"],
+  "mcpServers": {
+    "rak": {
+      "command": "npx",
+      "args": ["-y", "@rak/mcp"],
+      "env": {
+        "RAK_API_KEY": "${RAK_API_KEY}",
+        "RAK_BASE_URL": "https://rak.ad",
+        "RAK_TENANT_ID": "rak"
+      }
+    }
+  },
+  "remote": {
+    "url": "https://rak.ad/api/mcp/rak/streamable-http",
+    "authorization": "Bearer ${RAK_API_KEY}",
+    "headers": { "Api-Version": "2026-05" }
+  },
+  "tiers": ["anon", "free", "paid", "partner", "internal"]
+}

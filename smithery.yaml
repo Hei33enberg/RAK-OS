@@ -1,0 +1,27 @@
+# Smithery config — https://smithery.ai/docs
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      RAK_API_KEY:
+        type: string
+        title: RAK API Key
+        description: Bearer key. Pomiń dla dostępu anonimowego (metadane + web search 5/dzień/IP).
+      RAK_BASE_URL:
+        type: string
+        default: https://rak.ad
+      RAK_TENANT_ID:
+        type: string
+        default: rak
+    required: []
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@rak/mcp'],
+      env: {
+        RAK_API_KEY: config.RAK_API_KEY || '',
+        RAK_BASE_URL: config.RAK_BASE_URL || 'https://rak.ad',
+        RAK_TENANT_ID: config.RAK_TENANT_ID || 'rak'
+      }
+    })
