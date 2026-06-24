@@ -3,6 +3,8 @@
 > **RAK MCP to serwer [Model Context Protocol](https://modelcontextprotocol.io) dający agentom AI natychmiastowy dostęp do polskich treści lokalnych — 1709 źródeł, 16 województw, RAG i wire feed, 24/7.** Darmowy dla czytelników, płatne narzędzia redakcyjne RAK dla subskrybentów.
 >
 > 🌍 Strona/docs: **https://rak.ad/mcp** · 📦 npm: `@rak/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
+>
+> 📜 **Specyfikacja języka RAK (v0.1):** [`SPEC.md`](./SPEC.md) — otwarty standard „napisz raz → własność → cytowanie przez każdego agenta".
 
 `@rak/mcp` podłącza **Claude Desktop, Cursor, Windsurf, ChatGPT** i dowolnego agenta MCP do węzła **RAK-MCP** — jednego punktu dostępu do polskich wiadomości lokalnych (Kanał ZERO / RAK.AD) i uniwersalnych narzędzi redakcyjnych (research + write). Konwencja narzędzi: `rak_<moduł>_<operacja>`.
 
