@@ -5,6 +5,8 @@
 > 🌍 Strona/docs: **https://rak.ad/mcp** · 📦 npm: `@rak/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
 >
 > 📜 **Specyfikacja języka RAK (v0.1):** [`SPEC.md`](./SPEC.md) — otwarty standard „napisz raz → własność → cytowanie przez każdego agenta".
+>
+> 💸 **Ekonomia (Fosa):** [`ECONOMICS.md`](./ECONOMICS.md) — pay-per-AI-citation. Własna warstwa wyceny + rozliczeń (moat); Stripe Connect = wymienialna wtyczka na samym końcu.
 
 `@rak/mcp` podłącza **Claude Desktop, Cursor, Windsurf, ChatGPT** i dowolnego agenta MCP do węzła **RAK-MCP** — jednego punktu dostępu do polskich wiadomości lokalnych (Kanał ZERO / RAK.AD) i uniwersalnych narzędzi redakcyjnych (research + write). Konwencja narzędzi: `rak_<moduł>_<operacja>`.
 
