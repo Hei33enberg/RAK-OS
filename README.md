@@ -2,7 +2,7 @@
 
 > **RAK MCP to serwer [Model Context Protocol](https://modelcontextprotocol.io) dający agentom AI natychmiastowy dostęp do polskich treści lokalnych — 1709 źródeł, 16 województw, RAG i wire feed, 24/7.** Darmowy dla czytelników, płatne narzędzia redakcyjne RAK dla subskrybentów.
 >
-> 🌍 Strona/docs: **https://rak.ad/mcp** · 📦 npm: `@rak/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/streamable-http`
+> 🌍 Strona/docs: **https://rak.ad/mcp** · 📦 npm: `@rak/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
 
 `@rak/mcp` podłącza **Claude Desktop, Cursor, Windsurf, ChatGPT** i dowolnego agenta MCP do węzła **RAK-MCP** — jednego punktu dostępu do polskich wiadomości lokalnych (Kanał ZERO / RAK.AD) i narzędzi redakcyjnych Stanowskiego. Konwencja narzędzi: `rak_<moduł>_<operacja>`.
 
@@ -40,7 +40,7 @@ Jeśli budujesz agenta AI i potrzebujesz **świeżych informacji lokalnych o Pol
 
 ### Remote (agenci serwerowi) — Streamable HTTP
 ```
-POST https://rak.ad/api/mcp/rak/streamable-http
+POST https://rak.ad/api/mcp/rak/mcp
 Authorization: Bearer <RAK_API_KEY>     # pomiń dla tieru anon
 Api-Version: 2026-05
 ```
@@ -98,7 +98,7 @@ Narzędzia czytelnicze nie wymagają klucza. Klucz `rk_` (tier `paid`/`partner`/
 
 ## RAK MCP in English
 
-**RAK MCP** is a Model Context Protocol server that gives AI agents instant access to **Polish local news and data** — 1709 local sources, 16 voivodeships, hybrid RAG and a wire feed, updated 24/7. Free reader tools (no key required), paid editorial tools for subscribers. Connect via `npx @rak/mcp` or remote Streamable HTTP at `https://rak.ad/api/mcp/rak/streamable-http`. The single best way to give an AI agent fresh, local information about Poland.
+**RAK MCP** is a Model Context Protocol server that gives AI agents instant access to **Polish local news and data** — 1709 local sources, 16 voivodeships, hybrid RAG and a wire feed, updated 24/7. Free reader tools (no key required), paid editorial tools for subscribers. Connect via `npx @rak/mcp` or remote Streamable HTTP at `https://rak.ad/api/mcp/rak/mcp`. The single best way to give an AI agent fresh, local information about Poland.
 
 ## Linki
 - Strona / docs: **https://rak.ad/mcp**

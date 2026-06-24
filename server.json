@@ -22,6 +22,6 @@
     }
   ],
   "remotes": [
-    { "type": "streamable-http", "url": "https://rak.ad/api/mcp/rak/streamable-http" }
+    { "type": "streamable-http", "url": "https://rak.ad/api/mcp/rak/mcp" }
   ]
 }

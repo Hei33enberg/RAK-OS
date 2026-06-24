@@ -18,7 +18,7 @@
     }
   },
   "remote": {
-    "url": "https://rak.ad/api/mcp/rak/streamable-http",
+    "url": "https://rak.ad/api/mcp/rak/mcp",
     "authorization": "Bearer ${RAK_API_KEY}",
     "headers": { "Api-Version": "2026-05" }
   },
