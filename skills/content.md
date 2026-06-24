@@ -10,7 +10,7 @@ Gdy agent potrzebuje polskich treści lokalnych/krajowych: artykuły, wire feed,
 | `rak_content_get_article` | pełny artykuł po slug/id | free+ |
 | `rak_content_list_section` | lista per sekcja (paginacja) | free+ |
 | `rak_content_wire_feed` | syndykowany wire (minScore, since) | free+ |
-| `rak_content_voivodeship_feed` | treść per województwo (16 woj./TERYT) | free+ |
+| `rak_content_region_feed` | treść per region (PL: województwo, 16 woj./TERYT; alias `voivodeship`) | free+ |
 | `rak_meta_list_sources` | census 1709 źródeł lokalnych | anon (bez klucza) |
 
 ## Tier / koszt

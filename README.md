@@ -66,7 +66,7 @@ npx @modelcontextprotocol/inspector
 
 | Moduł | Narzędzia | Tier |
 |---|---|---|
-| `content` | `search`, `get_article`, `list_section`, `wire_feed`, `voivodeship_feed` | darmowe |
+| `content` | `search`, `get_article`, `list_section`, `wire_feed`, `region_feed` | darmowe |
 | `rag` | `find_related`, `semantic_search` | darmowe |
 | `meta` | `list_sources`, `list_skills`, `health` | anon / discovery |
 | `research` | `web`, `extract`, `fact_pack`, `summarize` | anon → paid |
@@ -79,7 +79,7 @@ Szczegóły per skill: [`skills/`](./skills).
 
 ## Przykłady (dla agentów)
 
-- **Newsy z województwa:** `rak_content_voivodeship_feed({ voivodeship: "mazowieckie", limit: 20 })`
+- **Newsy z regionu:** `rak_content_region_feed({ region: "mazowieckie", limit: 20 })`
 - **Wyszukiwanie tematu:** `rak_content_search({ query: "budżet samorządu", section: "polityka" })`
 - **Spis lokalnych źródeł:** `rak_meta_list_sources({ voivodeship: "malopolskie" })`
 - **Świeże depesze:** `rak_content_wire_feed({ minScore: 70, limit: 25 })`

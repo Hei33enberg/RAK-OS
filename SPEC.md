@@ -114,7 +114,7 @@ An agent: **discovers** (`rak_meta_*`), **reads** (`rak_content_*`, `rak_rag_*`)
 | `crawl` · `distribution` | search · add_source · subscribe · publish | internal |
 | `owned`² | publish · list · get | creator |
 
-¹ `region_feed` is the global concept; the PL reference node exposes it as `voivodeship_feed` (16 regions).
+¹ `region_feed` is the canonical tool (param `region`); the PL reference node maps it onto its 16 voivodeships and accepts `voivodeship` as a deprecated input alias.
 ² `owned_*` (creator publishes into their owned lane + reads it back) — roadmap, the loop that makes content *owned + cited + monetizable*.
 
 ## 8. Agents on RAK (the platform)
