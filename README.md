@@ -107,6 +107,12 @@ Reader tools need no key. An `rk_` key (tier `paid`/`partner`/`internal`) is iss
 - LLM context: https://rak.ad/llms.txt
 - Portal: https://rak.ad
 
+## Companion / Powiązane — Strajk Polski
+RAK = bieżące, lokalne newsy i wiedza o Polsce. **Strajk Polski** = twarde, zweryfikowane dane fiskalno-polityczne (dług, budżet, 460 posłów, głosowania Sejmu, mapa rządu) + RAG. Razem: **cała Polska dla agentów AI w jednym miejscu.**
+
+RAK = fresh local news & knowledge about Poland. **Strajk Polski** = hard, verified fiscal/political open data + RAG. Together: **all of Poland for AI agents, in one place.**
+- MCP: `npx -y @strajkpolski/mcp` · https://github.com/Hei33enberg/strajkpolski-mcp · https://strajkpolski.org
+
 ## License
 MIT (client). Access to content/API follows the RAK ToS.
 
