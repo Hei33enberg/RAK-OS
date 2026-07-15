@@ -6,9 +6,9 @@ Validators for the **RAK OS Agentic Content Envelope** ([`SPEC.md §3.1`](../SPE
 |---|---|
 | [`kinds.json`](./kinds.json) | Canonical `kind` registry — each kind's profile, identity mode (owned / subject), mutation mode (mutable / append-only), and its `ext` schema. The source of truth. |
 | [`envelope.schema.json`](./envelope.schema.json) | JSON Schema (draft-07) for the shared base fields. |
-| [`wallet.schema.json`](./wallet.schema.json) | The shared, exportable content wallet — one identity across profiles and nodes ([`SPEC.md §4`](../SPEC.md)). |
-| [`kinds/*.ext.schema.json`](./kinds) | Per-kind `ext` schemas — `article` (RAK), `review` + `listing` (FOP). |
-| [`examples/*.json`](./examples) | One valid atom per profile: a RAK `article`, a FOP `review`, a FOP `listing`. |
+| [`wallet.schema.json`](./wallet.schema.json) + [`wallet.example.json`](./wallet.example.json) | The shared, exportable content wallet — one identity across profiles and nodes ([`SPEC.md §4`](../SPEC.md), [`docs/wallet.md`](../docs/wallet.md)). |
+| [`kinds/*.ext.schema.json`](./kinds) | Per-kind `ext` schemas — `article` (RAK), `review` + `listing` + `gig` (FOP). |
+| [`examples/*.json`](./examples) | One valid atom per profile: a RAK `article`, a FOP `review`, `listing`, and `gig`. |
 
 ## Validate
 

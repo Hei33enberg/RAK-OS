@@ -29,7 +29,7 @@ Server-only companion columns (not on the wire, both protocols): embedding, mode
 
 - **`review` (L1, live)** — an opinion about a software/tool/business. Identity = `subject_key`. Scope guard blocks named private individuals (PL Art. 212 KK + GDPR).
 - **`listing` (L2, offers/classifieds)** — `ext` carries `{intent, status, price, location, category, attributes, media, scores, trust, contact_mode, canonical_url}`. `contact_mode` is intermediated (enquiries route via `enquire`, never raw seller contact).
-- **`gig` (L3, jobs)** — same pattern, a future `kind` + `ext` validator. Zero core migration.
+- **`gig` (L3, jobs/services)** — `ext` carries `{role, engagement, compensation, location, skills, status, contact_mode, canonical_url}` ([`schemas/kinds/gig.ext.schema.json`](../../schemas/kinds/gig.ext.schema.json)). `contact_mode` intermediated (applications route via the publisher). Same frozen atom, new `kind` + `ext`, zero core migration.
 
 ## Verb ↔ namespace mapping
 

@@ -12,6 +12,6 @@
     "dataset": { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": null },
     "review":  { "profile": "fop", "identity": "subject", "mutation": "append-only", "ext": "kinds/review.ext.schema.json" },
     "listing": { "profile": "fop", "identity": "owned",   "mutation": "append-only", "ext": "kinds/listing.ext.schema.json" },
-    "gig":     { "profile": "fop", "identity": "owned",   "mutation": "append-only", "ext": null, "status": "draft" }
+    "gig":     { "profile": "fop", "identity": "owned",   "mutation": "append-only", "ext": "kinds/gig.ext.schema.json" }
   }
 }
