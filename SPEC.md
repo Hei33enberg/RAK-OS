@@ -87,7 +87,7 @@ RAK is one member of a small family of agent-native objects that share a **base 
 
 **Extensibility invariant (shared).** The core is **frozen**; capability grows via a **new `kind` + `ext` validator**, never a core migration. The object version stays stable.
 
-The field-by-field mapping between profiles is [`docs/profiles/fop.md`](./docs/profiles/fop.md).
+The field-by-field mapping between profiles is [`docs/profiles/fop.md`](./docs/profiles/fop.md). Machine-readable validators — the base schema, the canonical `kind` registry, per-kind `ext`, and the shared wallet — live in [`schemas/`](./schemas/); `scripts/check-envelope.mjs` validates example atoms from both profiles in CI (`envelope-lint`).
 
 ## 4. Provenance — the content wallet
 

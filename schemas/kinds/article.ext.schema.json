@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rak.ad/schemas/kinds/article.ext.schema.json",
+  "title": "RAK `article` ext (content profile)",
+  "description": "Optional per-kind bag for a RAK article. All fields optional; consumers ignore unknown keys.",
+  "type": "object",
+  "properties": {
+    "section": { "type": "string", "description": "Section id (e.g. politics, local)." },
+    "region": { "type": "string", "description": "Node region key (PL: voivodeship slug)." },
+    "cover": { "type": "string", "format": "uri" },
+    "reading_time_min": { "type": "integer", "minimum": 0 }
+  }
+}

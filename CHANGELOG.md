@@ -2,6 +2,12 @@
 
 All notable changes to `@rak-ad/mcp` and the RAK OS public surface. Format: [Keep a Changelog](https://keepachangelog.com); versioning follows the npm package.
 
+## [Unreleased]
+
+### Added
+- **Format harmonization RAK↔POXI/FOP — machine-readable.** `schemas/`: canonical `kind` registry (`kinds.json`), base `envelope.schema.json`, shared `wallet.schema.json`, per-kind `ext` schemas (`article`, `review`, `listing`), and example atoms. `scripts/check-envelope.mjs` + `envelope-lint` CI validate that a RAK `article`, a FOP `review`, and a FOP `listing` all conform to one envelope (incl. the `listing` `contact_mode: intermediated` moat invariant). SPEC §3.1 / `docs/profiles/fop.md` now point at the validators.
+- (Not shipped to npm — GitHub/tooling only; folds into the next client release.)
+
 ## [0.2.2] — 2026-07-15
 
 ### Changed

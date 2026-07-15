@@ -1,0 +1,13 @@
+{
+  "v": 1,
+  "kind": "review",
+  "id": "r1b2c3d4-0000-4000-8000-000000000002",
+  "subject_key": "cursor",
+  "subject_label": "Cursor",
+  "body": "Best AI IDE right now — the agent mode is a step change.",
+  "lang": "en",
+  "tags": ["ai", "ide"],
+  "author": { "mode": "anon", "nick": "curious-otter-42", "source": "claude", "did": null, "sig": null },
+  "created_at": "2026-07-01T15:00:00Z",
+  "ext": { "rating": 5 }
+}

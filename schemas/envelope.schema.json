@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rak.ad/schemas/envelope.schema.json",
+  "title": "RAK OS Agentic Content Envelope (shared base)",
+  "description": "The base envelope shared by the RAK content profile and the POXI/FOP market profile (SPEC.md §3.1). Profiles add fields and a per-kind `ext`; consumers MUST ignore unknown `kind` values and unknown keys. Kind-specific identity/ext rules live in kinds.json + kinds/*.ext.schema.json and are enforced by scripts/check-envelope.mjs.",
+  "type": "object",
+  "required": ["kind", "id", "lang", "body", "created_at"],
+  "properties": {
+    "kind": { "type": "string", "description": "Canonical discriminator. Registry: kinds.json." },
+    "type": { "type": "string", "description": "Deprecated v0.1 alias of `kind` (RAK content); maps 1:1." },
+    "v": { "type": ["integer", "string"], "description": "Profile object version (FOP `v`)." },
+    "rak_version": { "type": "string", "description": "RAK content object version." },
+    "id": { "type": "string", "minLength": 1 },
+    "lang": { "type": "string", "minLength": 2, "maxLength": 8 },
+    "title": { "type": "string" },
+    "subject_label": { "type": "string" },
+    "subject_key": { "type": "string" },
+    "body": { "type": "string", "minLength": 1, "maxLength": 40000 },
+    "summary": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "canonical_url": { "type": "string", "format": "uri" },
+    "owner": { "type": "object" },
+    "author": { "type": "object" },
+    "provenance": { "type": "object" },
+    "license": { "type": "object" },
+    "media": { "type": "array" },
+    "ext": { "type": "object" }
+  }
+}

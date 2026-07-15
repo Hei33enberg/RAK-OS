@@ -1,0 +1,17 @@
+{
+  "rak_version": "0.1",
+  "kind": "article",
+  "id": "a1b2c3d4-0000-4000-8000-000000000001",
+  "lang": "pl",
+  "title": "Rada gminy przyjęła budżet na 2027",
+  "body": "# Budżet przyjęty\n\nRada gminy przegłosowała budżet...",
+  "summary": "Rada gminy przyjęła budżet na 2027 rok.",
+  "canonical_url": "https://rak.ad/rada-gminy-budzet-2027",
+  "created_at": "2026-07-15T12:00:00Z",
+  "updated_at": "2026-07-15T12:00:00Z",
+  "owner": { "creator_id": "rak:u_123", "agent": "stanosky", "created_via": "mcp:claude" },
+  "provenance": { "content_hash": "sha256:deadbeef", "signature": "ab12", "alg": "hmac-sha256", "wallet_id": "w_abc", "signed_at": "2026-07-15T12:00:00Z" },
+  "license": { "type": "owned_public", "require_citation": true, "commercial": "allow", "price_per_cite_cc": 0 },
+  "tags": ["samorzad", "budzet"],
+  "ext": {}
+}

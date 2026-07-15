@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rak.ad/schemas/kinds/listing.ext.schema.json",
+  "title": "FOP `listing` ext (market profile, L2 offers)",
+  "description": "Per-kind bag for a FOP listing (offer/classified). `contact_mode` MUST be 'intermediated' — no raw seller contact; enquiries route via the publisher's `enquire` verb (the moat). An update is a NEW atom (append-only); expiry/sold via `status`.",
+  "type": "object",
+  "required": ["intent", "status", "contact_mode", "canonical_url"],
+  "properties": {
+    "intent": { "enum": ["sell", "rent", "buy", "wanted"] },
+    "status": { "enum": ["active", "reserved", "sold", "expired"] },
+    "price": {
+      "type": "object",
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "period": { "type": ["string", "null"], "description": "month|year for rent; null otherwise." }
+      }
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "country": { "type": "string" },
+        "city": { "type": "string" },
+        "district": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" }
+      }
+    },
+    "category": { "enum": ["property", "vehicle", "goods"] },
+    "attributes": { "type": "object" },
+    "media": { "type": "array", "items": { "type": "string" } },
+    "scores": { "type": "object" },
+    "trust": { "type": "object" },
+    "contact_mode": { "const": "intermediated" },
+    "canonical_url": { "type": "string", "format": "uri" }
+  }
+}

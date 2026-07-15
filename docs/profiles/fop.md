@@ -16,6 +16,7 @@ This document maps FOP onto the base envelope. It is descriptive: FOP's core is 
 | `tags[]` | `tags[]` | same. |
 | `created_at` | `created_at` | same. |
 | `ext{}` | `ext{}` | same open per-kind bag; consumers ignore unknown keys. |
+| `ext.rating` | top-level `rating` | FOP keeps `rating` (1–5 or null) in its frozen wire core; as a base-envelope atom it maps to `ext.rating`. Both locations are accepted by the validator. |
 | identity (about-a-subject) | `subject_key` + `subject_label` | FOP's default mode; `subject_key` (btree) is the identity and the viral grouping. |
 | identity (owned/authored) | `author{…}` + `ext.canonical_url` | for `listing`, the publisher is the author and `ext.canonical_url` is the owned link. |
 | provenance / wallet | `author{mode, nick, source, did, sig}` | HMAC-derived `author_key`/nick today (MVP); `did`/`sig` reserved for Ed25519 — same trajectory as RAK's content wallet (`SPEC §4`). |
@@ -48,4 +49,4 @@ Licensing → **RSL**; provenance → **C2PA**; transport → **MCP**; payment �
 
 ## Reference
 
-FOP spec: `C:\poxi-fop\spec\FOP-PROTOCOL.md` (repo: P0XI). Reference nodes: [poxi.guru](https://poxi.guru) (subject pages), marocain.investments (L2 listings). RAK OS envelope: [`SPEC.md §3.1`](../../SPEC.md).
+FOP spec: `FOP-PROTOCOL.md` in the POXI repo (P0XI). Reference nodes: [poxi.guru](https://poxi.guru) (subject pages), marocain.investments (L2 listings). RAK OS envelope: [`SPEC.md §3.1`](../../SPEC.md) + machine-readable [`schemas/`](../../schemas/) (`kinds.json`, `envelope.schema.json`, `kinds/{review,listing}.ext.schema.json`, `wallet.schema.json`), validated by `scripts/check-envelope.mjs`.

@@ -1,0 +1,26 @@
+{
+  "v": 1,
+  "kind": "listing",
+  "id": "l1b2c3d4-0000-4000-8000-000000000003",
+  "subject_key": "re:ma:casablanca:pub42",
+  "subject_label": "Villa 610 m² — Californie, Casablanca",
+  "body": "Spacious 4-bedroom villa in Californie, well-priced for the district.",
+  "lang": "en",
+  "tags": ["MA", "Casablanca", "villa"],
+  "author": { "mode": "named", "nick": "marocain-investments", "source": "marocain.investments", "did": null, "sig": null },
+  "owner": { "creator_id": "fop:pub_42", "created_via": "api" },
+  "created_at": "2026-07-10T09:00:00Z",
+  "ext": {
+    "intent": "sell",
+    "status": "active",
+    "price": { "amount": 1500000, "currency": "USD", "period": null },
+    "location": { "country": "MA", "city": "Casablanca", "district": "Californie", "lat": 33.57, "lng": -7.58 },
+    "category": "property",
+    "attributes": { "typology": "villa", "rooms": 4, "bathrooms": 3, "surface_m2": 610 },
+    "media": ["https://cdn.marocain.investments/42/1.webp"],
+    "scores": { "quality": 88, "deal": 67, "verdict": "Solid asset, well-priced" },
+    "trust": { "verified": false, "source": "marocain.investments" },
+    "contact_mode": "intermediated",
+    "canonical_url": "https://marocain.investments/listing/42"
+  }
+}

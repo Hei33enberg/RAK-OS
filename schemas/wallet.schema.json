@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rak.ad/schemas/wallet.schema.json",
+  "title": "RAK OS content wallet (shared, exportable identity)",
+  "description": "One identity model across profiles and nodes (SPEC.md §4). HMAC-attested at MVP; Ed25519 with an exportable wallet.json at v1. RAK `owner`/`provenance` and FOP `author` bind to the same wallet — a creator's identity and history travel across RAK and POXI/FOP.",
+  "type": "object",
+  "required": ["wallet_id", "alg", "created_at"],
+  "properties": {
+    "wallet_id": { "type": "string", "description": "Stable per-creator key id." },
+    "alg": { "enum": ["hmac-sha256", "ed25519"] },
+    "pubkey": { "type": ["string", "null"], "description": "Ed25519 public key (v1); null under the HMAC MVP." },
+    "created_at": { "type": "string", "format": "date-time" },
+    "handles": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Stable per-source author keys / nicks this wallet owns (e.g. FOP anon author_key, a RAK creator_id)."
+    }
+  },
+  "definitions": {
+    "provenance": {
+      "type": "object",
+      "description": "Per-atom signature binding it to a wallet (SPEC.md §4). Verify by recomputing content_hash and checking signature.",
+      "required": ["content_hash", "alg", "wallet_id"],
+      "properties": {
+        "content_hash": { "type": "string" },
+        "signature": { "type": "string" },
+        "alg": { "enum": ["hmac-sha256", "ed25519"] },
+        "wallet_id": { "type": "string" },
+        "signed_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}
