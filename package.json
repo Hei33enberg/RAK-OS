@@ -14,7 +14,7 @@
     "poland", "kanal-zero", "stanosky"
   ],
   "homepage": "https://rak.ad",
-  "repository": { "type": "git", "url": "https://github.com/Hei33enberg/rak-mcp.git" },
+  "repository": { "type": "git", "url": "https://github.com/Hei33enberg/RAK-OS.git" },
   "license": "MIT",
   "publishConfig": { "access": "public" }
 }

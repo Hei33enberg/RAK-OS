@@ -4,7 +4,7 @@
   "description": "Media without an owner, for any country — an open MCP content language + free stack. First live node: Poland (1709 local sources, 16 regions, hybrid search, wire feed) + editorial tools (research/writing/media/QA). Fork a node for yours.",
   "version": "0.2.2",
   "repository": {
-    "url": "https://github.com/Hei33enberg/rak-mcp",
+    "url": "https://github.com/Hei33enberg/RAK-OS",
     "source": "github"
   },
   "websiteUrl": "https://rak.ad",
