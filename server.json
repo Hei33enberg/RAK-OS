@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "ad.rak/rak-mcp",
-  "description": "Polish local news + AI editorial tools: hybrid search, wire feed, per-region feeds (16 regions), 1709 sources, research/writing/media/QA.",
-  "version": "0.2.0",
+  "description": "Media without an owner, for any country — an open MCP content language + free stack. First live node: Poland (1709 local sources, 16 regions, hybrid search, wire feed) + editorial tools (research/writing/media/QA). Fork a node for yours.",
+  "version": "0.2.1",
   "repository": {
     "url": "https://github.com/Hei33enberg/rak-mcp",
     "source": "github"
@@ -12,7 +12,7 @@
     {
       "registryType": "npm",
       "identifier": "@rak-ad/mcp",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "transport": { "type": "stdio" },
       "environmentVariables": [
         { "name": "RAK_API_KEY", "description": "Bearer key (omit for anonymous access)", "isRequired": false, "isSecret": true },

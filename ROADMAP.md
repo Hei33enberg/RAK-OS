@@ -5,7 +5,7 @@ An honest, phased plan. Direction is set by the Crown ([`GOVERNANCE.md`](./GOVER
 ## Now (shipped or in this repo)
 
 - **The content language** — `SPEC.md` v0.2: the RAK content object + the shared base envelope for content **and** market ([FOP profile](./docs/profiles/fop.md)).
-- **The free index** — anonymous reader/discovery tools over MCP: 1709 sources, 16 regions, hybrid RAG, wire feed, health.
+- **The first node (Poland)** — anonymous reader/discovery tools over MCP, live and free: 1709 sources, 16 regions, hybrid RAG, wire feed, health — the proof other countries fork.
 - **Owned lane** — `rak_owned_*`: publish + verify your own content objects with a portable content wallet (HMAC today).
 - **Community & governance** — manifesto, Realm ladder, sovereign governance, contribution scaffolding.
 - **The orchestra** — CI that keeps the repo honest and the ledger current (skill-lint, honesty-lint, link-check, smoke, welcome, stale, realm-ledger, release-drafter).

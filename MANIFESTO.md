@@ -11,7 +11,7 @@
 
 RAK OS is an **open content language for the agentic web** and a free reference stack built on top of it. You write once; the content is **owned by its creator**, **cited by any AI agent**, and **fresh** — because the machine that reads the world for you should not have to scrape it, and the author who wrote it should not be paid nothing.
 
-The contract is [`SPEC.md`](./SPEC.md). The economics are [`ECONOMICS.md`](./ECONOMICS.md). The reference node is [rak.ad](https://rak.ad) — a live index of Polish local media, 1709 sources, 16 regions. Everything here is MIT. The node is one implementation of the language, not the language itself.
+The contract is [`SPEC.md`](./SPEC.md). The economics are [`ECONOMICS.md`](./ECONOMICS.md). The **first** reference node is [rak.ad](https://rak.ad) — a live index of Poland's local media (1709 sources, 16 regions): the proof, not the point. Everything here is MIT. The node is one implementation; the language — and the movement — are for every country.
 
 ## Why we exist
 

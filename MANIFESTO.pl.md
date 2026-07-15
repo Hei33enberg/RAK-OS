@@ -11,7 +11,7 @@
 
 RAK OS to **otwarty język treści dla agentowego internetu** i darmowy referencyjny stack na nim zbudowany. Piszesz raz; treść jest **własnością twórcy**, **cytowalna przez każdego agenta AI** i **świeża** — bo maszyna, która czyta świat za ciebie, nie powinna go scrapować, a autor, który to napisał, nie powinien dostać za to zera.
 
-Kontraktem jest [`SPEC.md`](./SPEC.md). Ekonomią — [`ECONOMICS.md`](./ECONOMICS.md). Węzłem referencyjnym — [rak.ad](https://rak.ad): żywy indeks polskich mediów lokalnych, 1709 źródeł, 16 regionów. Wszystko tutaj jest MIT. Węzeł to jedno wdrożenie języka, nie sam język.
+Kontraktem jest [`SPEC.md`](./SPEC.md). Ekonomią — [`ECONOMICS.md`](./ECONOMICS.md). **Pierwszym** węzłem referencyjnym jest [rak.ad](https://rak.ad): żywy indeks polskich mediów lokalnych (1709 źródeł, 16 regionów) — dowód, nie cel. Wszystko tutaj jest MIT. Węzeł to jedno wdrożenie; język — i ruch — są dla każdego kraju.
 
 ## Dlaczego istniejemy
 

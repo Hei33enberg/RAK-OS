@@ -1,7 +1,7 @@
 # RAK — A Content Language for the Agentic Web
 
 **Version 0.2 (Draft) · Open · MIT for this spec**
-Reference node: [rak.ad](https://rak.ad) · Transport: [Model Context Protocol](https://modelcontextprotocol.io) · Repo: github.com/Hei33enberg/rak-mcp
+First reference node: [rak.ad](https://rak.ad) (Poland — the test) · Transport: [Model Context Protocol](https://modelcontextprotocol.io) · Repo: github.com/Hei33enberg/rak-mcp
 
 > **RAK is a content language**: a small, open standard for content that is **written once, owned by its creator, and consumed natively by any AI agent** — cited, fresh, and (optionally) paid. It does not replace existing standards; it **composes** them (RSL for licensing, C2PA for provenance, MCP for transport, x402 for payment) into one creator-first, agent-native object.
 

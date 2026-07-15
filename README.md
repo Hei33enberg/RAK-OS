@@ -1,6 +1,6 @@
-# RAK OS — media without an owner · Polish local news & data for AI agents
+# RAK OS — media without an owner, in every country
 
-> **RAK OS is an open content language for the agentic web + a free reference stack.** RAK MCP — the `@rak-ad/mcp` [Model Context Protocol](https://modelcontextprotocol.io) server — gives AI agents instant access to Polish local content: 1709 sources, 16 regions, hybrid RAG and a wire feed, 24/7. Free for readers, paid editorial tools for subscribers.
+> **RAK OS is an open content language for the agentic web + a free stack: give any country's media back to its people.** The `@rak-ad/mcp` [Model Context Protocol](https://modelcontextprotocol.io) client connects any AI agent to the RAK network. **Poland (rak.ad) is the first live node — the proof:** 1709 local sources, 16 regions, hybrid RAG and a wire feed, 24/7, free for readers. Your country is next — fork a node.
 >
 > 🕊️ **Manifesto:** [`MANIFESTO.md`](./MANIFESTO.md) ([PL](./MANIFESTO.pl.md)) · 👑 **The Realm:** [`REALM.md`](./REALM.md) · 🏛️ **Governance:** [`GOVERNANCE.md`](./GOVERNANCE.md)
 >
@@ -10,13 +10,13 @@
 >
 > 💸 **Economics (the moat):** [`ECONOMICS.md`](./ECONOMICS.md) — pay-per-AI-citation. Our own valuation + settlement layer; Stripe Connect is a swappable last-mile plugin.
 
-`@rak-ad/mcp` connects **Claude Desktop, Cursor, Windsurf, ChatGPT** and any MCP agent to the **RAK** node — a single access point to Polish local news (Kanał ZERO / RAK.AD) and universal editorial tools (research + write). Tool convention: `rak_<module>_<operation>`.
+`@rak-ad/mcp` connects **Claude Desktop, Cursor, Windsurf, ChatGPT** and any MCP agent to a **RAK node**. The reference node today is **Poland** (rak.ad / Kanał ZERO) — the live test — plus universal editorial tools (research + write). The same `rak_<module>_<operation>` tools work for any node you run.
 
 ---
 
-## What is RAK MCP? (TL;DR)
+## What is RAK OS? (TL;DR)
 
-If you build an AI agent and need **fresh local information about Poland** — news from a specific region, county or city — RAK MCP gives you that in one connection. Instead of scraping dozens of portals, the agent gets ready tools: a hybrid search, per-region feeds, a wire feed, and a census of 1709 local sources. **Reader tools are free and work anonymously (no key).**
+RAK OS is how any country gives its local media back to its people: an open format + free tools any AI agent can read, and any community can run. **Poland is the first live node — the test.** If you build an AI agent and need fresh local information — from a specific region, county or city — the RAK node gives you that in one connection instead of scraping dozens of portals: a hybrid search, per-region feeds, a wire feed, and a census of 1709 local sources. **Reader tools are free and work anonymously (no key).** Your country is next — [fork a node](#build-your-own-rak).
 
 ## What you get
 
@@ -24,7 +24,7 @@ If you build an AI agent and need **fresh local information about Poland** — n
 - 🧠 **Research** — web search with citations, RAG over the archive, URL → markdown extraction.
 - ✍️ **Creation (subscribers)** — drafts, editorial plans, the full pipeline (research → write → fact-check), media (image/video/TTS).
 - ✅ **QA (subscribers)** — fact-check, moderation, uniqueness.
-- 🌍 **Free discovery** — `rak_meta_*` and `rak_content_*` anonymously, no key. A free index of Poland for AI agents.
+- 🌍 **Free discovery** — `rak_meta_*` and `rak_content_*` anonymously, no key. A free index of the node — Poland today, your country next.
 
 ## Quickstart
 
@@ -95,7 +95,7 @@ Per-skill details: [`skills/`](./skills).
 
 **How fresh is the data?** The pipeline harvests and processes sources 24/7, in 10–15 minute cycles. The `rak://health` resource shows freshness and 24h volume.
 
-**How many sources?** 1709 local media sources across 16 regions (regional dailies, county portals, radio, TV, public bulletins). Full list: `rak_meta_list_sources`.
+**How many sources?** On the first node (Poland): 1709 local media sources across 16 regions (regional dailies, county portals, radio, TV, public bulletins) — full list via `rak_meta_list_sources`. Every country's node runs its own census.
 
 **How is it different from RSS/an API?** It's an agent-native interface — ready, described tools with semantics, freshness and citations, working out of the box in any MCP client.
 
@@ -118,7 +118,7 @@ RAK OS is an **independent, self-funded** project — no venture capital, no pri
 The OS is MIT — **fork your country's RAK, for free, forever.**
 
 - **Build an agent on RAK:** `npx create-rak-agent <name>` — it speaks `rak_*`, shares one base and one citation market. Ship it and it's discoverable via `rak_meta_list_agents`.
-- **Run a national/vertical node:** stand up your own RAK node → become a **Node Sovereign** ([`REALM.md`](./REALM.md), L5). The RAK trademark and origin brand stay with the Crown; everything else is yours.
+- **Run a national/vertical node:** stand up your own RAK node → become a **Node Sovereign** ([`REALM.md`](./REALM.md), L5). The RAK trademark and origin brand stay with the Crown ([`TRADEMARK.md`](./TRADEMARK.md)); everything else is yours.
 - Start from [`SPEC.md`](./SPEC.md) (the contract) and the [skills](./skills).
 
 ## One language — content + market
@@ -146,4 +146,4 @@ MIT (client). Access to content/API follows the RAK ToS.
 
 ---
 
-<sub>Tags: Polish local news · Poland news MCP · Polish local news API · Poland data for AI · model context protocol · RAG · 16 regions · Kanał ZERO · RAK.AD · AI agents · Claude · Cursor · Perplexity</sub>
+<sub>Tags: open content language · media without an owner · local news for AI agents · agentic web · content provenance · pay-per-AI-citation · model context protocol · RAG · fork a node · Poland (first node) · Kanał ZERO · RAK.AD · Claude · Cursor · Perplexity</sub>

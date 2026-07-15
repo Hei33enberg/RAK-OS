@@ -2,6 +2,14 @@
 
 All notable changes to `@rak-ad/mcp` and the RAK OS public surface. Format: [Keep a Changelog](https://keepachangelog.com); versioning follows the npm package.
 
+## [0.2.1] — 2026-07-15
+
+### Changed
+- **Global reframe.** RAK OS leads as an open standard + stack for **any country's** media; Poland (rak.ad) is presented as the **first live node — the proof/test**, not the identity. Updated README, manifesto (EN/PL), SPEC, ROADMAP, and the npm/registry descriptions + keywords accordingly.
+
+### Added
+- `TRADEMARK.md` — open code (MIT) / protected origin brand; how to run a RAK-compatible national node without misusing the RAK mark (absorption-proofing).
+
 ## [0.2.0] — 2026-07-15
 
 ### Added

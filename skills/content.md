@@ -1,7 +1,7 @@
 # SKILL: rak-content — RAK content (read)
 
 ## When to use
-When an agent needs Polish local/national content: articles, wire feed, per-region feeds, hybrid search (FTS + semantics). Read-only.
+When an agent needs a RAK node's local/national content — the reference node today is Poland: articles, wire feed, per-region feeds, hybrid search (FTS + semantics). Read-only. The tools are node-agnostic; every country's node exposes the same surface.
 
 ## Tools
 | Tool | Purpose | Tier |

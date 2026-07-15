@@ -22,7 +22,7 @@ RAK OS funds itself from its own commercial reference node (rak.ad) and node-net
 
 ## Forks and national nodes
 
-The OS is MIT. Anyone may fork it and run a national or vertical node — this is encouraged (see **Node Sovereign** in [`REALM.md`](./REALM.md)). What does not transfer with a fork is the **RAK trademark** and the origin brand, which stay with the Crown. Open protocol, protected reference node.
+The OS is MIT. Anyone may fork it and run a national or vertical node — this is encouraged (see **Node Sovereign** in [`REALM.md`](./REALM.md)). What does not transfer with a fork is the **RAK trademark** and the origin brand, which stay with the Crown ([`TRADEMARK.md`](./TRADEMARK.md)). Open protocol, protected reference node.
 
 ## Changing this document
 
