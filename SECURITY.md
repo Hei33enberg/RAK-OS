@@ -6,7 +6,7 @@ RAK OS is infrastructure for media without an owner. Its integrity — provenanc
 
 **Do not open a public issue for a security vulnerability.**
 
-Report privately via GitHub's [private vulnerability reporting](https://github.com/Hei33enberg/rak-mcp/security/advisories/new) (Security → Report a vulnerability), or by direct message to the Crown ([@Hei33enberg](https://github.com/Hei33enberg)).
+Report privately via GitHub's [private vulnerability reporting](https://github.com/Hei33enberg/RAK-OS/security/advisories/new) (Security → Report a vulnerability), or by direct message to the Crown ([@Hei33enberg](https://github.com/Hei33enberg)).
 
 Please include: what you found, how to reproduce it, and the potential impact. We aim to acknowledge within a few days.
 

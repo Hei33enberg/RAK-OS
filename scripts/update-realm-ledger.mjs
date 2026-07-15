@@ -32,7 +32,7 @@ function levelFor(count) {
 }
 
 function build() {
-  const repo = process.env.GITHUB_REPOSITORY || "Hei33enberg/rak-mcp"
+  const repo = process.env.GITHUB_REPOSITORY || "Hei33enberg/RAK-OS"
   let prs = []
   try {
     const out = execSync(
