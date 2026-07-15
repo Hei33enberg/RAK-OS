@@ -1,7 +1,7 @@
 # RAK — A Content Language for the Agentic Web
 
-**Version 0.1 (Draft) · Open · MIT for this spec**
-Reference node: [rak.ad](https://rak.ad) · Transport: [Model Context Protocol](https://modelcontextprotocol.io) · Repo: github.com/Hei33enberg/RAK-MCP
+**Version 0.2 (Draft) · Open · MIT for this spec**
+Reference node: [rak.ad](https://rak.ad) · Transport: [Model Context Protocol](https://modelcontextprotocol.io) · Repo: github.com/Hei33enberg/rak-mcp
 
 > **RAK is a content language**: a small, open standard for content that is **written once, owned by its creator, and consumed natively by any AI agent** — cited, fresh, and (optionally) paid. It does not replace existing standards; it **composes** them (RSL for licensing, C2PA for provenance, MCP for transport, x402 for payment) into one creator-first, agent-native object.
 
@@ -64,6 +64,30 @@ The atomic unit — the "UPC of content for AI". A logical object that may live 
 ```
 
 A reader (agent) receives at minimum: `title`, `summary`/`body`, `canonical_url`, `owner.creator_id`, `provenance` (so it can **cite + verify**), and `license`.
+
+### 3.1 Base envelope & profiles (added in v0.2)
+
+RAK is one member of a small family of agent-native objects that share a **base envelope**, so an agent speaks **one language across content and market**. A sibling protocol — **[POXI / FOP](./docs/profiles/fop.md)** (opinions → listings → gigs) — is the first independent implementation of this envelope. The RAK Content Object above is the **content profile**; FOP is the **opinion/market profile**.
+
+**Shared base fields (every profile):**
+
+| Field | Meaning |
+|---|---|
+| `kind` | the discriminator — `article`/`post`/… (RAK), `review`/`listing`/`gig` (FOP). **`kind` is canonical.** RAK's `type` (§3) is a documented alias during the v0.1→v0.2 window and maps 1:1 onto `kind`. |
+| `id`, `lang`, `body`, `tags[]`, `created_at` | as in §3. |
+| `ext{}` | an **open, per-kind bag**; consumers MUST ignore unknown `kind` values and unknown `ext` keys. |
+| provenance / identity | one portable content-wallet (§4): HMAC (MVP) → Ed25519 `wallet.json`. A creator's identity travels across profiles and nodes. |
+| interop | RSL (license), C2PA (media provenance), MCP (transport), x402/ACP (payment) — §10. |
+
+**Two identity modes, one base.** A `kind` declares how it is identified:
+- *owned / authored* — `owner{creator_id,…}` + `canonical_url` (e.g. RAK `article`, a publisher's FOP `listing`).
+- *about-a-subject* — `subject_key` (normalized dedup key) + `subject_label` (e.g. a FOP `review`).
+
+**Two mutation modes, one base.** A `kind` declares `mutable` (RAK draft → published) or `append-only` (FOP opinion/listing snapshots — an update is a new atom).
+
+**Extensibility invariant (shared).** The core is **frozen**; capability grows via a **new `kind` + `ext` validator**, never a core migration. The object version stays stable.
+
+The field-by-field mapping between profiles is [`docs/profiles/fop.md`](./docs/profiles/fop.md).
 
 ## 4. Provenance — the content wallet
 
@@ -149,10 +173,10 @@ RAK does not compete with these; it is the **creator-first object** that ties th
 
 ## 11. Versioning & governance
 
-- `rak_version` is semver. This is **v0.1 (draft)**. Breaking changes bump the major; tools are deprecated with a support window, never silently broken.
+- `rak_version` is semver (the wire object version). This spec **document** is **v0.2 (draft)**; the wire `rak_version` stays at its draft level and, per the extensibility invariant (§3.1), grows via new `kind` + `ext` rather than breaking. Breaking changes bump the major; tools are deprecated with a support window, never silently broken.
 - Company-led-open today (the MCP playbook). A standards-body donation (W3C CG / Linux Foundation) is on the table once adoption warrants it (cf. AP2→FIDO, x402→Linux Foundation).
 - The spec is open (MIT). The reference node and `@rak-ad/mcp` client are MIT. Access to content/tools follows each node's ToS.
 
 ---
 
-*RAK v0.1 — write once, own it, let every agent cite it. Reference implementation: rak.ad.*
+*RAK v0.2 — write once, own it, let every agent cite it. One envelope for content and market. Reference implementation: rak.ad.*

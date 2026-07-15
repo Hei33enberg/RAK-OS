@@ -1,0 +1,17 @@
+name: skill-lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  skill-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate skills, versions, JSON, and internal links
+        run: node scripts/check-skills.mjs

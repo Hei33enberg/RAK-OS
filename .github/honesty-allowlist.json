@@ -1,0 +1,5 @@
+[
+  {
+    "$comment": "Exceptions for honesty-lint. Add { \"file\": \"NAME.md\", \"phrase\": \"...\" } only with a real reason (e.g. legal copy quoting a term). Prefer rewriting over allowlisting."
+  }
+]

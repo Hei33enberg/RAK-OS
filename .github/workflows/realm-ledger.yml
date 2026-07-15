@@ -1,0 +1,35 @@
+name: realm-ledger
+
+# Scheduled (not merge-triggered) so it can never loop. Regenerates the REALM ledger
+# table in HALL_OF_FAME.md from merged `substantive` PRs and commits with [skip ci].
+on:
+  schedule:
+    - cron: "0 5 * * 1" # weekly Monday 05:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Rebuild ledger
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/update-realm-ledger.mjs
+      - name: Commit if changed
+        run: |
+          if [[ -n "$(git status --porcelain HALL_OF_FAME.md)" ]]; then
+            git config user.name "rak-os-bot"
+            git config user.email "bot@rak.ad"
+            git add HALL_OF_FAME.md
+            git commit -m "chore(realm): refresh ledger [skip ci]"
+            git push
+          else
+            echo "Ledger unchanged."
+          fi

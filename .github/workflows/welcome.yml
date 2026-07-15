@@ -1,0 +1,28 @@
+name: welcome
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  # Message-only. Does NOT check out or run any PR code.
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: >
+            Welcome to the Realm 👑 — thank you for your first issue.
+            You're now a **Citizen (L0)**. See [REALM.md](../blob/main/REALM.md) for how contribution is
+            credited, and [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) to get started.
+          pr-message: >
+            Welcome, and thank you for your first pull request 👑.
+            CI runs `skill-lint` and `honesty-lint` — see [AGENTS.md](../blob/main/AGENTS.md) to run them locally.
+            A merged substantive PR makes you a **Correspondent (L1)** in [REALM.md](../blob/main/REALM.md).

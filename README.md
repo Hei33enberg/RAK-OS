@@ -1,10 +1,12 @@
-# RAK MCP — Polish local news & data about Poland, for AI agents
+# RAK OS — media without an owner · Polish local news & data for AI agents
 
-> **RAK MCP is a [Model Context Protocol](https://modelcontextprotocol.io) server that gives AI agents instant access to Polish local content — 1709 sources, 16 regions, hybrid RAG and a wire feed, 24/7.** Free for readers, paid editorial RAK tools for subscribers.
+> **RAK OS is an open content language for the agentic web + a free reference stack.** RAK MCP — the `@rak-ad/mcp` [Model Context Protocol](https://modelcontextprotocol.io) server — gives AI agents instant access to Polish local content: 1709 sources, 16 regions, hybrid RAG and a wire feed, 24/7. Free for readers, paid editorial tools for subscribers.
+>
+> 🕊️ **Manifesto:** [`MANIFESTO.md`](./MANIFESTO.md) ([PL](./MANIFESTO.pl.md)) · 👑 **The Realm:** [`REALM.md`](./REALM.md) · 🏛️ **Governance:** [`GOVERNANCE.md`](./GOVERNANCE.md)
 >
 > 🌍 Site/docs: **https://rak.ad/mcp** · 📦 npm: `@rak-ad/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
 >
-> 📜 **RAK language spec (v0.1):** [`SPEC.md`](./SPEC.md) — the open standard "write once → own it → cited by every agent".
+> 📜 **RAK language spec (v0.2):** [`SPEC.md`](./SPEC.md) — the open standard "write once → own it → cited by every agent". One envelope for **content and market** ([FOP profile](./docs/profiles/fop.md)).
 >
 > 💸 **Economics (the moat):** [`ECONOMICS.md`](./ECONOMICS.md) — pay-per-AI-citation. Our own valuation + settlement layer; Stripe Connect is a swappable last-mile plugin.
 
@@ -106,6 +108,32 @@ Reader tools need no key. An `rk_` key (tier `paid`/`partner`/`internal`) is iss
 - Site / docs: **https://rak.ad/mcp**
 - LLM context: https://rak.ad/llms.txt
 - Portal: https://rak.ad
+
+## Who's behind this
+
+RAK OS is an **independent, self-funded** project — no venture capital, no private equity, no big-media owner. It is a kingdom, honestly: one maintainer (the Crown, [@Hei33enberg](https://github.com/Hei33enberg)) holds the vision and the last word; the community builds and is credited in the open ([`REALM.md`](./REALM.md)). Why this structure — and how it's kept hard to capture — is in the [Manifesto](./MANIFESTO.md) and the Realm's absorption-proofing section.
+
+## Build your own RAK
+
+The OS is MIT — **fork your country's RAK, for free, forever.**
+
+- **Build an agent on RAK:** `npx create-rak-agent <name>` — it speaks `rak_*`, shares one base and one citation market. Ship it and it's discoverable via `rak_meta_list_agents`.
+- **Run a national/vertical node:** stand up your own RAK node → become a **Node Sovereign** ([`REALM.md`](./REALM.md), L5). The RAK trademark and origin brand stay with the Crown; everything else is yours.
+- Start from [`SPEC.md`](./SPEC.md) (the contract) and the [skills](./skills).
+
+## One language — content + market
+
+RAK's content object shares a **base envelope** ([`SPEC.md §3.1`](./SPEC.md)) with a sibling protocol, **POXI / FOP** (opinions → listings → gigs). One `kind`/`ext`/wallet/interop base means an agent speaks **both content and market** in one language. Mapping: [`docs/profiles/fop.md`](./docs/profiles/fop.md). Two independent implementations of one envelope is the network effect the language is built for.
+
+## Built on Open Mercato
+
+RAK (and POXI) run on **[Open Mercato](https://github.com/open-mercato/open-mercato)** — an open, inspectable runtime engine. We didn't reinvent the foundation; durability comes from boring, auditable infrastructure. If you want the same operational certainty under your own node, that's the engine.
+
+## Community
+
+- **Discussions:** GitHub Discussions (once enabled) — questions, RFCs, show-and-tell.
+- **Contribute:** [`CONTRIBUTING.md`](./CONTRIBUTING.md) — humans and AI agents both ([`AGENTS.md`](./AGENTS.md)).
+- **Chat:** a native RAK chat/IRC surface is proposed ([RFC 0001](./docs/rfcs/0001-irc-skill.md)) — the goal is that community chat eventually runs on RAK itself.
 
 ## Companion / Powiązane — Strajk Polski
 RAK = bieżące, lokalne newsy i wiedza o Polsce. **Strajk Polski** = twarde, zweryfikowane dane fiskalno-polityczne (dług, budżet, 460 posłów, głosowania Sejmu, mapa rządu) + RAG. Razem: **cała Polska dla agentów AI w jednym miejscu.**

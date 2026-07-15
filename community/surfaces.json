@@ -1,0 +1,29 @@
+{
+  "$comment": "Canonical public surfaces of RAK OS. A registry so docs and automation reference real things.",
+  "docs": [
+    "MANIFESTO.md",
+    "MANIFESTO.pl.md",
+    "REALM.md",
+    "GOVERNANCE.md",
+    "MAINTAINERS.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
+    "HALL_OF_FAME.md",
+    "SPEC.md",
+    "ECONOMICS.md",
+    "AGENTS.md",
+    "docs/profiles/fop.md",
+    "docs/rfcs/0000-template.md",
+    "docs/rfcs/0001-irc-skill.md"
+  ],
+  "skills": ["content", "rag", "discovery", "research", "write", "media", "qa", "owned", "distribution"],
+  "manifests": ["package.json", "server.json", "claude-plugin.json", "mcp.json", "smithery.yaml"],
+  "external": {
+    "site": "https://rak.ad",
+    "npm": "@rak-ad/mcp",
+    "remote": "https://rak.ad/api/mcp/rak/mcp",
+    "engine": "https://github.com/open-mercato/open-mercato",
+    "sibling": "https://poxi.guru"
+  }
+}

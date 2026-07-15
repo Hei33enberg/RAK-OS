@@ -1,0 +1,17 @@
+name: honesty-lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  honesty-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: No absolute claims or internal leaks in public docs
+        run: node scripts/check-honesty.mjs

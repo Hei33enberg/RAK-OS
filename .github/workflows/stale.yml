@@ -1,0 +1,32 @@
+name: stale
+
+on:
+  schedule:
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 30
+          days-before-close: 14
+          stale-issue-label: stale
+          stale-pr-label: stale
+          only-labels: awaiting-response
+          exempt-issue-labels: pinned,rfc,security,good-first-issue,roadmap
+          exempt-pr-labels: pinned,rfc,security,roadmap
+          stale-issue-message: >
+            This has been awaiting a response for 30 days and is now marked stale.
+            It will close in 14 days if there's no further activity. Remove the label or comment to keep it open.
+          stale-pr-message: >
+            This PR has been awaiting a response for 30 days and is now marked stale.
+            It will close in 14 days without further activity.
+          # Never stale a first-timer's opening issue: they carry no `awaiting-response` label,
+          # and `only-labels` restricts staling to threads explicitly waiting on the author.

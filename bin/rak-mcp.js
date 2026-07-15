@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 /**
- * @rak-ad/mcp — zero-config bridge do hostowanego RAK MCP (remote streamable-HTTP).
+ * @rak-ad/mcp — zero-config bridge to the hosted RAK MCP (remote streamable-HTTP).
  *
- * Klienty stdio-only (które nie umieją remote MCP) odpalają `npx -y @rak-ad/mcp`; ten wrapper
- * proxuje stdio ↔ https://rak.ad/api/mcp/rak/mcp przez `mcp-remote`. Klienty z natywnym remote
- * MCP (Claude Code, Cursor) mogą pominąć paczkę i wpiąć URL bezpośrednio.
+ * stdio-only clients (that can't speak remote MCP) run `npx -y @rak-ad/mcp`; this wrapper
+ * proxies stdio <-> https://rak.ad/api/mcp/rak/mcp via `mcp-remote`. Clients with native remote
+ * MCP (Claude Code, Cursor) can skip the package and wire the URL directly.
  *
  * ENV:
- *   RAK_API_KEY   — klucz `rk_…` (bez niego = darmowy/anonimowy tier, 13 narzędzi read/research).
- *   RAK_BASE_URL  — opcjonalnie nadpisz host (domyślnie https://rak.ad).
+ *   RAK_API_KEY   — an `rk_…` key (without it = free/anonymous tier: read + capped research tools).
+ *   RAK_BASE_URL  — optionally override the host (default https://rak.ad).
  */
 import { spawn } from "node:child_process"
 
@@ -25,6 +25,6 @@ const child = spawn("npx", args, {
 })
 child.on("exit", (code) => process.exit(code == null ? 0 : code))
 child.on("error", (err) => {
-  console.error("[@rak-ad/mcp] nie udało się uruchomić mcp-remote:", err.message)
+  console.error("[@rak-ad/mcp] failed to start mcp-remote:", err.message)
   process.exit(1)
 })

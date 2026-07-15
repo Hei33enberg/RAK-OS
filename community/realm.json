@@ -1,0 +1,18 @@
+{
+  "$comment": "Open ledger of the Realm. Regenerated into HALL_OF_FAME.md by the realm-ledger workflow. Roles/levels defined in REALM.md.",
+  "levels": {
+    "L2": { "role": "Editor", "gate": "3+ substantive merged PRs" },
+    "L3": { "role": "Bureau Chief", "gate": "5+ PRs, sustained area ownership" }
+  },
+  "substantiveLabel": "substantive",
+  "contributors": [
+    {
+      "name": "Hei33enberg",
+      "github": "Hei33enberg",
+      "level": "Crown",
+      "role": "The Crown",
+      "contributions": "Founder · vision · spec",
+      "since": "2026"
+    }
+  ]
+}

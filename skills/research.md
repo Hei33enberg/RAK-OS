@@ -10,8 +10,8 @@ When an agent builds research for a piece: fast web search, fact aggregation wit
 | `rak_research_fact_pack` | facts + sources + risks | paid |
 | `rak_research_summarize` | topic summary from the archive | paid |
 | `rak_research_extract` | any URL → clean markdown (SSRF-safe) | paid |
-| `rak_rag_find_related` | related articles (similarity) | paid |
-| `rak_rag_semantic_search` | dense search over embeddings | paid |
+
+> Retrieval over the RAK archive (`rak_rag_find_related`, `rak_rag_semantic_search`) is a **free reader** capability — see [`rag.md`](./rag.md).
 
 ## Tier / cost
 `rak_research_web` is free with a hard 5/day/IP limit. The rest are `paid` (credits per RAK pricing).

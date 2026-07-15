@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/Hei33enberg/rak-mcp/security/advisories/new
+    about: Please report vulnerabilities privately — see SECURITY.md, do not open a public issue.
+  - name: RAK node / product (rak.ad)
+    url: https://rak.ad
+    about: Questions about the hosted rak.ad product, keys, or partner access.
