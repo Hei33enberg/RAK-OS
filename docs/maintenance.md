@@ -8,6 +8,7 @@ How RAK OS keeps itself healthy, and how to cut a release. For contributors and 
 |---|---|---|---|
 | `skill-lint` | push / PR | skill-card format, version consistency, JSON parse, internal links (`scripts/check-skills.mjs`) | **yes** |
 | `honesty-lint` | push / PR | no absolute claims / internal leaks in public docs (`scripts/check-honesty.mjs`) | **yes** |
+| `envelope-lint` | push / PR | example atoms conform to the shared envelope + kind rules (`scripts/check-envelope.mjs`) | **yes** |
 | `link-check` | PR / weekly | external link health (lychee) | no (advisory; weekly opens a rolling issue) |
 | `smoke` | nightly / manual | live MCP anon surface (`scripts/smoke.mjs`); opens/updates a `smoke-failing` issue, auto-closes on green | no (self-reports) |
 | `welcome` | issue / PR opened | greets first-time contributors (message only) | no |
@@ -21,6 +22,7 @@ How RAK OS keeps itself healthy, and how to cut a release. For contributors and 
 ```bash
 node scripts/check-skills.mjs     # format, versions, JSON, internal links
 node scripts/check-honesty.mjs    # absolute-claim / internal-leak guard
+node scripts/check-envelope.mjs   # shared RAK↔FOP envelope: examples conform to kinds + ext
 node scripts/smoke.mjs            # live MCP anon surface (needs network)
 ```
 

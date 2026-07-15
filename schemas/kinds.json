@@ -1,0 +1,17 @@
+{
+  "$comment": "Canonical `kind` registry for the RAK OS Agentic Content Envelope (SPEC.md §3.1). Both the RAK content profile and the POXI/FOP market profile conform. Machine-readable source of truth for validators. Core is frozen; new capability = a new kind + ext validator, never a core migration.",
+  "envelopeVersion": "0.2",
+  "kinds": {
+    "article": { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": "kinds/article.ext.schema.json" },
+    "post":    { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": null },
+    "note":    { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": null },
+    "thread":  { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": null },
+    "podcast": { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": null },
+    "image":   { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": null },
+    "video":   { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": null },
+    "dataset": { "profile": "rak", "identity": "owned",   "mutation": "mutable",     "ext": null },
+    "review":  { "profile": "fop", "identity": "subject", "mutation": "append-only", "ext": "kinds/review.ext.schema.json" },
+    "listing": { "profile": "fop", "identity": "owned",   "mutation": "append-only", "ext": "kinds/listing.ext.schema.json" },
+    "gig":     { "profile": "fop", "identity": "owned",   "mutation": "append-only", "ext": null, "status": "draft" }
+  }
+}
