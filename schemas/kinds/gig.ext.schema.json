@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rak.ad/schemas/kinds/gig.ext.schema.json",
+  "title": "FOP `gig` ext (market profile, L3 jobs/services)",
+  "description": "Per-kind bag for a FOP gig — a job or service offer. Same frozen atom, new kind + ext, zero core migration. `contact_mode` MUST be 'intermediated' (applications route via the publisher's flow, never raw contact). An update is a NEW atom (append-only); fill/close via `status`.",
+  "type": "object",
+  "required": ["engagement", "status", "contact_mode", "canonical_url"],
+  "properties": {
+    "role": { "type": "string", "description": "Role/title, e.g. 'Backend engineer' or 'Logo design'." },
+    "engagement": { "enum": ["contract", "full_time", "part_time", "freelance", "internship"] },
+    "compensation": {
+      "type": "object",
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "currency": { "type": "string" },
+        "period": { "enum": ["hour", "day", "month", "year", "project"] }
+      }
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "mode": { "enum": ["remote", "hybrid", "onsite"] },
+        "country": { "type": "string" },
+        "city": { "type": "string" }
+      }
+    },
+    "skills": { "type": "array", "items": { "type": "string" } },
+    "status": { "enum": ["open", "filled", "closed"] },
+    "contact_mode": { "const": "intermediated" },
+    "canonical_url": { "type": "string", "format": "uri" }
+  }
+}

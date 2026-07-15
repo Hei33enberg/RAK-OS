@@ -99,6 +99,8 @@ Every object is signed over its canonical content, binding it to a creator.
 
 Verification: a consumer recomputes `content_hash` and checks `signature`. Tampering → `verified: false`.
 
+Machine-readable: [`schemas/wallet.schema.json`](./schemas/wallet.schema.json) + [`docs/wallet.md`](./docs/wallet.md) — **one wallet across RAK and POXI/FOP** (RAK `owner`/`provenance` and FOP `author` bind to the same identity), exportable as `wallet.json` at v1.
+
 ### 4.1 Media
 Generated or attached media (image/video/audio) MUST be **re-hosted to a node-controlled store** (never a third-party ephemeral URL) and referenced by a permanent `url` + `hash`, optionally C2PA-signed. Media is part of the owned object — it cannot depend on a provider link that may expire.
 

@@ -51,6 +51,13 @@ function validateAtom(name, atom) {
     if (rating != null && !(Number.isInteger(rating) && rating >= 1 && rating <= 5))
       fail(name, "review rating must be 1..5 or null")
   }
+  if (kind === "gig") {
+    const e = atom.ext || {}
+    if (!["contract", "full_time", "part_time", "freelance", "internship"].includes(e.engagement)) fail(name, "gig ext.engagement invalid")
+    if (!["open", "filled", "closed"].includes(e.status)) fail(name, "gig ext.status invalid")
+    if (e.contact_mode !== "intermediated") fail(name, "gig ext.contact_mode MUST be 'intermediated' (the moat invariant)")
+    if (!isStr(e.canonical_url)) fail(name, "gig ext.canonical_url required")
+  }
 }
 
 // 1) every kind that declares an ext schema must have that file on disk

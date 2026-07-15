@@ -1,0 +1,23 @@
+{
+  "v": 1,
+  "kind": "gig",
+  "id": "g1b2c3d4-0000-4000-8000-000000000004",
+  "subject_key": "gig:poxi:backend-engineer-remote",
+  "subject_label": "Backend engineer (Node/Postgres) — remote",
+  "body": "Build the FOP settlement layer. Node, Postgres/pgvector, MCP. Async-first team.",
+  "lang": "en",
+  "tags": ["engineering", "backend", "remote"],
+  "author": { "mode": "named", "nick": "poxi-hub", "source": "poxi.guru", "did": null, "sig": null },
+  "owner": { "creator_id": "fop:org_7", "created_via": "api" },
+  "created_at": "2026-07-12T10:00:00Z",
+  "ext": {
+    "role": "Backend engineer",
+    "engagement": "contract",
+    "compensation": { "min": 6000, "max": 9000, "currency": "EUR", "period": "month" },
+    "location": { "mode": "remote", "country": "EU" },
+    "skills": ["node", "postgres", "pgvector", "mcp"],
+    "status": "open",
+    "contact_mode": "intermediated",
+    "canonical_url": "https://poxi.guru/gig/backend-engineer-remote"
+  }
+}

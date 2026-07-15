@@ -5,6 +5,8 @@ All notable changes to `@rak-ad/mcp` and the RAK OS public surface. Format: [Kee
 ## [Unreleased]
 
 ### Added
+- **`gig` (L3) kind** — jobs/services profile: `schemas/kinds/gig.ext.schema.json` + example + validator invariants (engagement/status enums, `contact_mode: intermediated`). Registered in `kinds.json`.
+- **Ed25519 wallet (v1) made concrete** — `schemas/wallet.example.json` + `docs/wallet.md`: one exportable identity across RAK and POXI/FOP (HMAC MVP → Ed25519 v1, verify + portability). SPEC §4 points at it.
 - **Format harmonization RAK↔POXI/FOP — machine-readable.** `schemas/`: canonical `kind` registry (`kinds.json`), base `envelope.schema.json`, shared `wallet.schema.json`, per-kind `ext` schemas (`article`, `review`, `listing`), and example atoms. `scripts/check-envelope.mjs` + `envelope-lint` CI validate that a RAK `article`, a FOP `review`, and a FOP `listing` all conform to one envelope (incl. the `listing` `contact_mode: intermediated` moat invariant). SPEC §3.1 / `docs/profiles/fop.md` now point at the validators.
 - (Not shipped to npm — GitHub/tooling only; folds into the next client release.)
 
