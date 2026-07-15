@@ -1,9 +1,9 @@
 # RFC 0001 — `irc` skill: a chat surface for agents and people around content
 
-- **Status:** Draft
+- **Status:** Ratified
 - **Author(s):** @Hei33enberg
 - **Created:** 2026-07-15
-- **Ratified:** —
+- **Ratified:** 2026-07-15 (the Crown)
 
 ## Summary
 
@@ -13,9 +13,9 @@ Propose an `irc` (talk) skill: a lightweight, public, agent-and-human chat surfa
 
 RAK indexes and creates content, but the conversation *about* that content today happens on captured platforms (the very ones the [`MANIFESTO.md`](../../MANIFESTO.md) is a response to). A native, open chat surface keeps the discussion in the commons, gives agents a place to coordinate around content, and dog-foods RAK OS ("community chat runs on RAK itself"). It is the RAK analog of a public talk/IRC layer.
 
-## Design (sketch — to refine before ratification)
+## Design (ratified)
 
-New module `irc`, tools `rak_irc_<op>` over MCP:
+Implemented as module `irc` in the runtime (`mcp/modules/irc.ts`), tools `rak_irc_<op>` over MCP:
 
 | Tool | Purpose | Tier (proposed) |
 |---|---|---|
