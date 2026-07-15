@@ -1,10 +1,10 @@
 {
   "name": "@rak-ad/mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "RAK Model Context Protocol — Polish local content (articles, wire, per-region feeds, 1709 sources) + AI editorial tools (research, writing, media, QA) for agents.",
   "type": "module",
   "bin": { "rak-mcp": "bin/rak-mcp.js" },
-  "files": ["bin", "skills", "README.md", "LICENSE"],
+  "files": ["bin", "skills", "README.md", "LICENSE", "CHANGELOG.md"],
   "engines": { "node": ">=18" },
   "dependencies": { "mcp-remote": "^0.1.0" },
   "keywords": [

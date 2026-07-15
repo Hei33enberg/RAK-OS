@@ -19,12 +19,35 @@ const key = (process.env.RAK_API_KEY || "").trim()
 const args = ["-y", "mcp-remote", url, "--header", "x-tenant-id: rak"]
 if (key) args.push("--header", `Authorization: Bearer ${key}`)
 
-const child = spawn("npx", args, {
-  stdio: "inherit",
-  shell: process.platform === "win32",
-})
-child.on("exit", (code) => process.exit(code == null ? 0 : code))
-child.on("error", (err) => {
-  console.error("[@rak-ad/mcp] failed to start mcp-remote:", err.message)
-  process.exit(1)
-})
+// Autohealing: transient network/DNS blips at launch can make mcp-remote exit
+// immediately. Retry only *fast* startup failures (ran < 5s, non-zero exit), with
+// backoff, up to a small cap. A clean exit (code 0) or a long-running session that
+// ends is passed through untouched — we never hot-loop and never retry a real close.
+const MAX_FAST_RETRIES = 3
+let fastFailures = 0
+
+function start() {
+  const startedAt = Date.now()
+  const child = spawn("npx", args, {
+    stdio: "inherit",
+    shell: process.platform === "win32",
+  })
+  child.on("exit", (code) => {
+    if (code === 0 || code == null) process.exit(0)
+    const ranMs = Date.now() - startedAt
+    if (ranMs < 5000 && fastFailures < MAX_FAST_RETRIES) {
+      fastFailures += 1
+      const backoff = 1000 * 2 ** (fastFailures - 1)
+      console.error(`[@rak-ad/mcp] startup failed (exit ${code}); retry ${fastFailures}/${MAX_FAST_RETRIES} in ${backoff}ms…`)
+      setTimeout(start, backoff)
+      return
+    }
+    process.exit(code)
+  })
+  child.on("error", (err) => {
+    console.error("[@rak-ad/mcp] failed to start mcp-remote:", err.message)
+    process.exit(1)
+  })
+}
+
+start()

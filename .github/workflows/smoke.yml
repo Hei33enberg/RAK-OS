@@ -1,0 +1,52 @@
+name: smoke
+
+# Live smoke test of the RAK MCP anonymous surface. Not a PR gate (external service);
+# it self-reports by opening/updating a single issue on failure (autohealing signal).
+on:
+  schedule:
+    - cron: "0 2 * * *" # nightly 02:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run live smoke
+        id: smoke
+        run: node scripts/smoke.mjs
+
+      - name: Open or update self-report issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="RAK MCP smoke failing"
+          body="The scheduled smoke test failed. Run: $RUN_URL
+
+          The RAK MCP anonymous surface (rak.ad) did not pass \`scripts/smoke.mjs\`. This usually means the live node, the endpoint, or the free-tier tools regressed. Investigate rak.ad, not this repo."
+          existing=$(gh issue list --state open --label smoke-failing --json number -q '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh label create smoke-failing --color b60205 --description "Live smoke test failing" 2>/dev/null || true
+            gh issue create --title "$title" --label smoke-failing --body "$body"
+          fi
+
+      - name: Auto-close self-report issue on success
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for n in $(gh issue list --state open --label smoke-failing --json number -q '.[].number'); do
+            gh issue comment "$n" --body "Smoke is green again ✅ — auto-closing."
+            gh issue close "$n"
+          done

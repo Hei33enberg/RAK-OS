@@ -1,0 +1,8 @@
+# Normalize line endings so CRLF/LF never breaks scripts, manifests, or byte-parity.
+* text=auto eol=lf
+*.mjs text eol=lf
+*.js  text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md  text eol=lf

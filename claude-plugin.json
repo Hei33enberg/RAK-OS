@@ -1,7 +1,7 @@
 {
   "name": "rak-mcp",
   "displayName": "RAK — Polish local content + AI editorial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Instant access to Kanał ZERO / RAK.AD content (articles, wire, per-region feeds, 1709 sources) and editorial tools (research, writing, media, QA) over MCP.",
   "homepage": "https://rak.ad",
   "categories": ["news", "content", "research", "poland", "media"],
