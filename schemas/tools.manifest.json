@@ -1,0 +1,559 @@
+{
+  "source": "rak.ad live rak_meta_list_skills",
+  "toolCount": 54,
+  "tools": [
+    {
+      "name": "rak_content_create_poll",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_content_get_article",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_content_list_section",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_content_region_feed",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_content_search",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_content_wire_feed",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_crawl_add_source",
+      "tiers": [
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_crawl_search",
+      "tiers": [
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_crawl_subscribe",
+      "tiers": [
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_distribution_publish",
+      "tiers": [
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "none"
+    },
+    {
+      "name": "rak_irc_create_channel",
+      "tiers": [
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_irc_list_channels",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_irc_post",
+      "tiers": [
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_irc_presence",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_irc_read_channel",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_legal_search",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_media_generate_image",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_media_generate_song",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_media_generate_video",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_media_storyboard",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_media_tts",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_meta_health",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_meta_list_agents",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_meta_list_skills",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_meta_list_sources",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_murl_list_channels",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_murl_open",
+      "tiers": [
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_murl_post",
+      "tiers": [
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_murl_presence",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_murl_read",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_owned_get",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_owned_list",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_owned_publish",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "none"
+    },
+    {
+      "name": "rak_owned_verify",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_qa_fact_check",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "central"
+    },
+    {
+      "name": "rak_qa_moderate",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "none"
+    },
+    {
+      "name": "rak_qa_uniqueness",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "none"
+    },
+    {
+      "name": "rak_rag_find_related",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_rag_search_chunks",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_rag_semantic_search",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_research_deep",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_research_extract",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "central"
+    },
+    {
+      "name": "rak_research_fact_pack",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_research_summarize",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_research_web",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "central"
+    },
+    {
+      "name": "rak_voice_search",
+      "tiers": [
+        "anon",
+        "free",
+        "paid",
+        "partner",
+        "internal"
+      ],
+      "scope": "content:read",
+      "billing": "none"
+    },
+    {
+      "name": "rak_write_debate",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_write_document",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_write_draft",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_write_edit",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_write_export",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_write_pipeline",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_write_plan",
+      "tiers": [
+        "paid",
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    },
+    {
+      "name": "rak_write_publish",
+      "tiers": [
+        "internal"
+      ],
+      "scope": "skills:action",
+      "billing": "self"
+    }
+  ]
+}

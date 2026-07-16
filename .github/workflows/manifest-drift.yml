@@ -1,0 +1,52 @@
+name: manifest-drift
+
+# SSOT drift-gate (Fala 3): the runtime at rak.ad is the source of truth for the tool
+# surface. Fails if the committed schemas/tools.manifest.json no longer matches the live
+# `rak_meta_list_skills` catalog — catches a stale-deploy regression or an undocumented
+# tool automatically. Self-reports via a `manifest-drift` issue (external service → not a PR gate).
+on:
+  schedule:
+    - cron: "30 2 * * *" # nightly, after smoke
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  manifest-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check manifest vs live
+        id: drift
+        run: node scripts/sync-manifest.mjs --check
+
+      - name: Open or update self-report issue on drift
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="MCP manifest drift (public surface ≠ live rak.ad)"
+          body="The committed \`schemas/tools.manifest.json\` no longer matches the live \`rak_meta_list_skills\` at rak.ad. Either the runtime changed its tool surface (commit the new manifest: \`node scripts/sync-manifest.mjs\`) or prod regressed to a stale deploy (redeploy from clean \`origin/feat/raidakcja-f1-v3\`). Run: $RUN_URL"
+          existing=$(gh issue list --state open --label manifest-drift --json number -q '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh label create manifest-drift --color d93f0b --description "MCP tool surface drift" 2>/dev/null || true
+            gh issue create --title "$title" --label manifest-drift --body "$body"
+          fi
+
+      - name: Auto-close on green
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for n in $(gh issue list --state open --label manifest-drift --json number -q '.[].number'); do
+            gh issue comment "$n" --body "Manifest matches live again ✅ — auto-closing."
+            gh issue close "$n"
+          done
