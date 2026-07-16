@@ -19,7 +19,7 @@
     "docs/rfcs/0000-template.md",
     "docs/rfcs/0001-irc-skill.md"
   ],
-  "skills": ["content", "rag", "discovery", "research", "write", "media", "qa", "owned", "distribution"],
+  "skills": ["content", "rag", "voice", "legal", "discovery", "irc", "murl", "research", "write", "media", "qa", "owned", "distribution"],
   "manifests": ["package.json", "server.json", "claude-plugin.json", "mcp.json", "smithery.yaml"],
   "external": {
     "site": "https://rak.ad",

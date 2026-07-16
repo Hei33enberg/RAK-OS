@@ -32,7 +32,7 @@ Levels are earned by contribution, tracked in the open, and reflected in [`HALL_
 | **L4** | Herald | Sustained propagation (content / talks / integrations). Crown-nominated. |
 | **L5** | Node Sovereign | A live forked RAK node in production, discoverable via `rak_meta_list_agents`. |
 
-L5 is the load-bearing tier of the whole project: **"fork your country's RAK"** made concrete. The `rak_agents` registry and `npx create-rak-agent` already exist — a node or agent you stand up is discoverable by every RAK-speaking agent the day it goes live.
+L5 is the load-bearing tier of the whole project: **"fork your country's RAK"** made concrete. The `rak_agents` registry already exists — an agent or node you stand up is discoverable (via `rak_meta_list_agents`) by every RAK-speaking agent the day it goes live. Today you build against `rak_*` directly (the [`SPEC.md`](./SPEC.md) + MCP); the one-command `create-rak-agent` scaffold is on the [roadmap](./ROADMAP.md).
 
 ## Rewards per level
 

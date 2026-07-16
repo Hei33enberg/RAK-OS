@@ -15,9 +15,9 @@ When an agent needs to **discover** RAK before (or without) reading: the census 
 Anonymous / discovery — available on every tier including `anon`. No credit cost; results are cached (near-static).
 
 ## Build on RAK
-`rak_meta_list_agents` returns the scaffold and SDK for building your own:
-- `npx create-rak-agent <name>` — scaffold an agent that speaks `rak_*`.
-- SDK / spec: this repository ([`SPEC.md`](../SPEC.md)). Ship an agent or a national node and it becomes discoverable here (see **Node Sovereign** in [`REALM.md`](../REALM.md)).
+`rak_meta_list_agents` returns the agents already built on RAK and how to join them:
+- Build against `rak_*` directly over MCP — SDK / spec is this repository ([`SPEC.md`](../SPEC.md)). A one-command `npx create-rak-agent` scaffold is on the [roadmap](../ROADMAP.md).
+- Ship an agent or a national node and it becomes discoverable here (see **Node Sovereign** in [`REALM.md`](../REALM.md)).
 
 ## Example prompts
 - "List RAK sources in Lesser Poland, then check pipeline freshness."
