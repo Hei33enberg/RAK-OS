@@ -93,6 +93,18 @@ await check("rak_meta_list_sources → census 1709+", async () => {
   if (!(s.grandTotal >= 1000)) throw new Error(`grandTotal=${s.grandTotal}`)
 })
 
+await check("rak_voice_search → persona knowledge (not degraded)", async () => {
+  const v = toolJson(await mcp("tools/call", { name: "rak_voice_search", arguments: { query: "wolność mediów i cenzura", matchCount: 2 } }))
+  if (v.degraded) throw new Error("voice degraded — embedding provider down")
+  if (!(v.count >= 1)) throw new Error(`voice count=${v.count}`)
+})
+
+await check("rak_legal_search → legal fragments (not degraded)", async () => {
+  const l = toolJson(await mcp("tools/call", { name: "rak_legal_search", arguments: { query: "ochrona danych osobowych", matchCount: 2 } }))
+  if (l.degraded) throw new Error("legal degraded — embedding provider down")
+  if (!(l.count >= 1)) throw new Error(`legal count=${l.count}`)
+})
+
 // npm publish check — WARN only (never a hard fail; a published package proves the README's `npx` works).
 try {
   const { execSync } = await import("node:child_process")
