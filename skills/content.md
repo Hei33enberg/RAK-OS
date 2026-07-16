@@ -11,7 +11,8 @@ When an agent needs a RAK node's local/national content — the reference node t
 | `rak_content_list_section` | list per section (pagination) | free+ |
 | `rak_content_wire_feed` | syndicated wire feed (minScore, since) | free+ |
 | `rak_content_region_feed` | content per region (PL node maps to voivodeship — 16 regions/TERYT; input alias `voivodeship`) | free+ |
-| `rak_meta_list_sources` | census of 1709 local sources | anon (no key) |
+| `rak_content_create_poll` | attach a reader poll to an article | paid (creator) |
+| `rak_meta_list_sources` | census of 1709 local sources (belongs to `meta`/discovery — see [discovery](./discovery.md)) | anon (no key) |
 
 ## Tier / cost
 Read = `free` with a low rate limit; `rak_meta_*` works anonymously (discovery/AEO). No credit cost.

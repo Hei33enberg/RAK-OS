@@ -8,6 +8,7 @@ When an agent needs semantic retrieval over the RAK archive: articles related to
 |---|---|---|
 | `rak_rag_find_related` | related articles to a `query` **or** to an article (`slug`); `count?` (default 6), `section?` | free (reader) |
 | `rak_rag_semantic_search` | hybrid dense + FTS search over article embeddings; `query`, `matchCount?` (default 10), `section?` | free (reader) |
+| `rak_rag_search_chunks` | passage/chunk-level semantic search (finer-grained than article-level) — citable spans | free (reader) |
 
 ## Tier / cost
 `free` reader tier (available from `anon`), `content:read` scope, no credit cost. The tiny embedding cost is absorbed; both tools are rate-limited and cached. `semantic_search` falls back to sparse FTS if the embedding provider is down, so it returns results instead of an empty set.

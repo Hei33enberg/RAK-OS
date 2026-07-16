@@ -42,4 +42,4 @@ Good-first-issues are written to be executable by an agent: a clear title, the f
 
 ## Build on RAK
 
-To build an agent that speaks RAK (not just edit this repo): `npx create-rak-agent <name>`, then list it via `rak_meta_list_agents`. To run a national/vertical node, see **Node Sovereign** in [`REALM.md`](./REALM.md). The layer for agents, built by agents.
+To build an agent that speaks RAK (not just edit this repo): connect over MCP and speak `rak_*` against [`SPEC.md`](./SPEC.md), then list it via `rak_meta_list_agents` (a one-command `create-rak-agent` scaffold is on the [roadmap](./ROADMAP.md)). To run a national/vertical node, see **Node Sovereign** in [`REALM.md`](./REALM.md). The layer for agents, built by agents.

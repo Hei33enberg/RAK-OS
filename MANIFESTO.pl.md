@@ -23,7 +23,7 @@ Uważamy, że antidotum jest nudne i trwałe: **otwarty format, darmowy indeks i
 
 - **Informacja to infrastruktura, nie towar.** To, co czytasz — i co agent czyta za ciebie — nie jest produktem do inwigilacji i sprzedaży. Warstwa czytelnika w RAK działa **bez klucza i bez konta**.
 
-- **Jeden otwarty format.** Napisz raz, miej to na własność, pozwól każdemu agentowi cytować. Mały, wersjonowany obiekt ([`SPEC.md`](./SPEC.md), który **komponuje** istniejące standardy (RSL — licencje, C2PA — pochodzenie, MCP — transport, x402/ACP — płatność) zamiast je wymyślać na nowo.
+- **Jeden otwarty format.** Napisz raz, miej to na własność, pozwól każdemu agentowi cytować. Mały, wersjonowany obiekt ([`SPEC.md`](./SPEC.md)), który **komponuje** istniejące standardy (RSL — licencje, C2PA — pochodzenie, MCP — transport, x402/ACP — płatność) zamiast je wymyślać na nowo.
 
 - **Agreguj lokalne.** Najpierw przejmowane są historie lokalne, bo lokalne redakcje najtaniej kupić albo zagłodzić. RAK indeksuje je — każdy region, każdy powiat — w jedno miejsce, które trudno przejąć, bo nie jest jednym miejscem.
 
@@ -35,7 +35,7 @@ Uważamy, że antidotum jest nudne i trwałe: **otwarty format, darmowy indeks i
 
 - **Królestwo, uczciwie.** Jeden maintainer trzyma wizję i ostatnie słowo — model jednego właściciela (BDFL), ten sam, który przez lata niósł Linuksa, Pythona i SQLite. Mówimy to wprost, bo udawanie demokracji, gdy decyduje jedna osoba, to wersja nieuczciwa. Społeczność **buduje** i jest **kredytowana** w jawnym ledgerze ([`REALM.md`](./REALM.md)).
 
-- **Forkuj RAK-a swojego kraju.** Polski węzeł zostaje przy swoim maintainerze. **OS jest MIT** — postaw własnego, krajowego RAK-a, za darmo, na zawsze. Format i marka-pochodzenia zostają suwerenne, więc dobra wspólnego nie da się przejąć przez przejęcie jednej osoby. `npx create-rak-agent`, by budować na nim; postaw węzeł, by nim zostać.
+- **Forkuj RAK-a swojego kraju.** Polski węzeł zostaje przy swoim maintainerze. **OS jest MIT** — postaw własnego, krajowego RAK-a, za darmo, na zawsze. Format i marka-pochodzenia zostają suwerenne, więc dobra wspólnego nie da się przejąć przez przejęcie jednej osoby. Buduj na nim mówiąc `rak_*` już dziś (jednokomendowy scaffold jest na mapie drogowej); postaw węzeł, by nim zostać.
 
 - **Zbudowane na pewnym silniku.** RAK działa na [Open Mercato](https://github.com/open-mercato/open-mercato) — otwartym runtime, którego nie musieliśmy wymyślać. Jesteśmy uczciwi co do stacku: trwałość bierze się z nudnych, sprawdzalnych fundamentów, nie z magii.
 

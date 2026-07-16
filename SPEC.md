@@ -128,25 +128,31 @@ An agent: **discovers** (`rak_meta_*`), **reads** (`rak_content_*`, `rak_rag_*`)
 
 ## 7. Tool namespace — `rak_<module>_<op>`
 
+Live surface is `rak_meta_list_skills` / [`schemas/tools.manifest.json`](./schemas/tools.manifest.json) — **54 tools**. Summary:
+
 | Module | Ops | Tier |
 |---|---|---|
-| `content` | search · get · list_section · wire_feed · region_feed¹ | free (reader) |
-| `rag` | find_related · semantic_search | free (reader) |
-| `meta` | list_sources · list_skills · health | anon / discovery |
-| `research` | web · extract · fact_pack · summarize | anon-capped → paid |
-| `write` | draft · edit · export · plan · pipeline · publish | paid → internal |
-| `media` | generate_image · generate_video · tts | paid |
+| `content` | search · get · list_section · wire_feed · region_feed¹ · create_poll (paid) | anon (reader) |
+| `rag` | find_related · semantic_search · search_chunks | anon (reader) |
+| `voice` | search (persona-knowledge RAG) | anon (reader) |
+| `legal` | search (Polish-law corpus, ELI/ISAP) | anon (reader) |
+| `meta` | list_sources · list_skills · health · list_agents | anon / discovery |
+| `irc` | list_channels · read_channel · presence · post · create_channel | anon read / free post |
+| `murl` | list_channels · read · presence · open · post | anon read / free post |
+| `research` | web · extract · fact_pack · summarize · deep | anon-capped → paid |
+| `write` | draft · edit · plan · pipeline · publish · export · debate · document | paid → internal |
+| `media` | generate_image · generate_video · generate_song · storyboard · tts | paid |
 | `qa` | fact_check · moderate · uniqueness | paid |
+| `owned`² | publish · list · get · verify | creator |
 | `crawl` · `distribution` | search · add_source · subscribe · publish | internal |
-| `owned`² | publish · list · get | creator |
 
 ¹ `region_feed` is the canonical tool (param `region`); the PL reference node maps it onto its 16 voivodeships and accepts `voivodeship` as a deprecated input alias.
-² `owned_*` (creator publishes into their owned lane + reads it back) — roadmap, the loop that makes content *owned + cited + monetizable*.
+² `owned_*` (creator publishes into their owned lane + reads it back) is **shipped** — the loop that makes content *owned + cited + monetizable*.
 
 ## 8. Agents on RAK (the platform)
 
 RAK is a base **language**; agents are built **on** it:
-- **Stanosky** — the reference Polish agent (flagship implementation).
+- **Stanosky** — the reference Polish agent (flagship implementation). *Note: the live PL node's `rak_meta_list_agents` currently returns this agent under the legacy slug `stanowski`; the registry is being migrated to `stanosky`.*
 - Anyone can build an agent or a **local/vertical version** (region, topic, language, white-label). All speak `rak_*`, share one base and one citation market.
 - Network effect: more agents → more content → more value for consuming agents → more citations → more earnings → more creators.
 

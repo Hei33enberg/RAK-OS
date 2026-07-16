@@ -35,7 +35,7 @@ We think the antidote is boring and durable: **an open format, a free index, and
 
 - **A kingdom, honestly.** One maintainer holds the vision and the last word — a single-owner (BDFL) model, the same one that carried Linux, Python and SQLite for years. We say this openly because pretending a project is a democracy when one person decides is the dishonest version. The community **builds** and is **credited** in an open ledger ([`REALM.md`](./REALM.md)).
 
-- **Fork your nation's RAK.** Poland's node stays with its maintainer. The **OS is MIT** — stand up your own country's RAK, for free, forever. The format and the origin brand stay sovereign, so the commons cannot be captured by capturing one person. `npx create-rak-agent` to build on it; run a node to become one.
+- **Fork your nation's RAK.** Poland's node stays with its maintainer. The **OS is MIT** — stand up your own country's RAK, for free, forever. The format and the origin brand stay sovereign, so the commons cannot be captured by capturing one person. Build on it by speaking `rak_*` today (a one-command scaffold is on the roadmap); run a node to become one.
 
 - **Built on a reliable engine.** RAK runs on [Open Mercato](https://github.com/open-mercato/open-mercato), an open runtime we did not have to reinvent. We are honest about the stack: durability comes from boring, inspectable foundations, not magic.
 

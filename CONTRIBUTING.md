@@ -6,7 +6,7 @@ Welcome. RAK OS is an open content language for the agentic web and a free refer
 
 - **Skills & docs** — improve or add a skill card in [`skills/`](./skills), fix an example, clarify a tier.
 - **Spec & profiles** — propose changes to [`SPEC.md`](./SPEC.md) or a new profile in [`docs/profiles/`](./docs/profiles) via an RFC.
-- **Build on RAK** — an agent (`npx create-rak-agent`) or a national/vertical node. Ship it, then list it via `rak_meta_list_agents`.
+- **Build on RAK** — an agent (speak `rak_*` over MCP against [`SPEC.md`](./SPEC.md); a `create-rak-agent` scaffold is on the [roadmap](./ROADMAP.md)) or a national/vertical node. Ship it, then list it via `rak_meta_list_agents`.
 - **Report** — bugs, link rot, or a security issue ([`SECURITY.md`](./SECURITY.md)).
 
 ## Workflow
