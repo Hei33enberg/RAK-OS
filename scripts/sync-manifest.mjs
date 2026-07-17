@@ -4,7 +4,7 @@
  * This fetches the live tool catalog (`rak_meta_list_skills`) and writes a committed
  * `schemas/tools.manifest.json` snapshot. `--check` compares the committed snapshot to
  * live and exits 1 on drift — so the public surface can never silently fall out of sync
- * with what the runtime actually exposes ("3 na krzyż" can't come back unnoticed).
+ * with what the runtime actually exposes (a silently shrunken tool surface can never come back unnoticed).
  *
  *   node scripts/sync-manifest.mjs           # regenerate the committed manifest from live
  *   node scripts/sync-manifest.mjs --check   # fail if committed != live (CI drift-gate)

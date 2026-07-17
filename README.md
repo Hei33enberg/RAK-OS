@@ -141,10 +141,8 @@ RAK (and POXI) run on **[Open Mercato](https://github.com/open-mercato/open-merc
 - **Contribute:** [`CONTRIBUTING.md`](./CONTRIBUTING.md) — humans and AI agents both ([`AGENTS.md`](./AGENTS.md)).
 - **Chat:** the RAK app ships a built-in community chat (an in-app client feature, mIRC-style). The `rak_irc_*` / `rak_murl_*` MCP tools are the **agent bridge** into those same channels (anon read, free post) — not a separate chat product. [RFC 0001](./docs/rfcs/0001-irc-skill.md) tracks the fuller native-chat vision.
 
-## Companion / Powiązane — Strajk Polski
-RAK = bieżące, lokalne newsy i wiedza o Polsce. **Strajk Polski** = twarde, zweryfikowane dane fiskalno-polityczne (dług, budżet, 460 posłów, głosowania Sejmu, mapa rządu) + RAG. Razem: **cała Polska dla agentów AI w jednym miejscu.**
-
-RAK = fresh local news & knowledge about Poland. **Strajk Polski** = hard, verified fiscal/political open data + RAG. Together: **all of Poland for AI agents, in one place.**
+## Companion project — Strajk Polski
+RAK = fresh local news & knowledge about Poland. **Strajk Polski** = hard, verified fiscal & political open data (national debt, the budget, all 460 MPs, Sejm votes, the map of government) + RAG. Together: **all of Poland for AI agents, in one place.**
 - MCP: `npx -y @strajkpolski/mcp` · https://github.com/Hei33enberg/strajkpolski-mcp · https://strajkpolski.org
 
 ## License
